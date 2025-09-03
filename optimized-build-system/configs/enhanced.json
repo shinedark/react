@@ -1,0 +1,27 @@
+{
+  "strategy": "enhanced",
+  "description": "Enhanced Max Aggression - Advanced: up to 40% reduction",
+  "config": {
+    "maxManifestSize": 15728640,
+    "maxOptimizationPercentage": 40,
+    "targetPatterns": {
+      "components": "^[A-Z][a-zA-Z0-9]*$", "hooks": "^use[A-Z][a-zA-Z0-9]*$", "functions": "^[a-z][a-zA-Z0-9]*$",
+      "variables": "^[a-zA-Z_$][a-zA-Z0-9_$]*$", "longIdentifiers": "^[a-zA-Z_$][a-zA-Z0-9_$]{4,}$",
+      "properties": "^[a-zA-Z_$][a-zA-Z0-9_$]*$", "parameters": "^[a-zA-Z_$][a-zA-Z0-9_$]*$",
+      "customComponents": "^custom[A-Z][a-zA-Z0-9]*$", "utilities": "^[a-z]+[A-Z][a-zA-Z0-9]*$"
+    },
+    "protectedIdentifiers": [
+      "React", "useState", "useEffect", "useRef", "useMemo", "useCallback", "ethers", "window", "document", "console", "localStorage",
+      "THREE", "Scene", "Camera", "Renderer", "Mesh", "Geometry", "setTimeout", "setInterval", "fetch", "XMLHttpRequest",
+      "addEventListener", "removeEventListener", "querySelector", "constructor", "prototype", "super", "__proto__", "this",
+      "arguments", "eval", "apply", "call", "bind", "toString", "valueOf", "hasOwnProperty",
+      "render", "componentDidMount", "componentWillUnmount"
+    ],
+    "criticalPatterns": ["React\\.", "useState\\(", "useEffect\\(", "useRef\\(", "THREE\\.", "window\\.", "document\\."],
+    "skipContexts": ["import", "export", "require", "module", "exports", "global"],
+    "stringOptimization": { "minLength": 5, "maxReplacements": 2000, "minOccurrences": 2 },
+    "numberOptimization": { "minValue": 100, "maxReplacements": 1000, "minOccurrences": 2 }
+  },
+  "recommended": false,
+  "performance": { "averageReduction": 25.0, "maxReduction": 40, "manifestSize": "~15MB", "processingTime": "~45s" }
+}

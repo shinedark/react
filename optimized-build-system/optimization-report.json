@@ -1,0 +1,30 @@
+{
+  "timestamp": "2025-09-02T17:26:37.595Z",
+  "strategy": "Maximum Aggression",
+  "results": {
+    "originalSize": 110196,
+    "optimizedSize": 98147,
+    "reduction": 10.934153689789103,
+    "processingTime": 92,
+    "savings": 12049
+  },
+  "files": [
+    {
+      "type": "optimized",
+      "path": "/Users/camilopineda/Desktop/sdcode/SDM/sdm/build/static/js/main.max-aggression.js",
+      "size": 98147
+    },
+    {
+      "type": "manifest",
+      "path": "/Users/camilopineda/Desktop/sdcode/SDM/sdm/build/static/max-aggression-manifest.json",
+      "size": 30880
+    },
+    {
+      "type": "backup",
+      "path": "/Users/camilopineda/Desktop/sdcode/SDM/sdm/build/static/js/main.js.max-aggression.backup",
+      "size": 110196
+    }
+  ],
+  "errors": [],
+  "warnings": []
+}

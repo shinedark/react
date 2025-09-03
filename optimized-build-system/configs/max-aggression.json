@@ -1,0 +1,24 @@
+{
+  "strategy": "max-aggression",
+  "description": "Max Aggression - Best performer: 14.37% reduction",
+  "config": {
+    "maxManifestSize": 10485760,
+    "maxOptimizationPercentage": 35,
+    "targetPatterns": {
+      "components": "^[A-Z][a-zA-Z0-9]*$",
+      "hooks": "^use[A-Z][a-zA-Z0-9]*$",
+      "functions": "^[a-z][a-zA-Z0-9]*$",
+      "variables": "^[a-zA-Z_$][a-zA-Z0-9_$]*$",
+      "longIdentifiers": "^[a-zA-Z_$][a-zA-Z0-9_$]{4,}$",
+      "properties": "^[a-zA-Z_$][a-zA-Z0-9_$]*$",
+      "parameters": "^[a-zA-Z_$][a-zA-Z0-9_$]*$"
+    },
+    "protectedIdentifiers": ["React", "useState", "useEffect", "useRef", "ethers", "window", "document", "THREE", "Scene", "Camera", "setTimeout", "setInterval"],
+    "criticalPatterns": ["React\\.", "useState\\(", "useEffect\\(", "useRef\\(", "THREE\\."],
+    "skipContexts": ["import", "export", "require", "module", "exports"],
+    "stringOptimization": { "minLength": 8, "maxReplacements": 1000 },
+    "numberOptimization": { "minValue": 1000, "maxReplacements": 500 }
+  },
+  "recommended": true,
+  "performance": { "averageReduction": 14.37, "maxReduction": 35, "manifestSize": "~10MB", "processingTime": "~30s" }
+}

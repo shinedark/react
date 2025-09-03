@@ -1,0 +1,28 @@
+{
+  "name": "semantic-build-optimizer",
+  "version": "2.0.0",
+  "description": "Professional semantic minification for React/React Native",
+  "main": "scripts/universal-optimizer.js",
+  "bin": {
+    "semantic-optimize": "./scripts/universal-optimizer.js"
+  },
+  "scripts": {
+    "optimize": "node scripts/universal-optimizer.js",
+    "optimize:max": "node scripts/universal-optimizer.js --strategy max-aggression",
+    "optimize:enhanced": "node scripts/universal-optimizer.js --strategy enhanced",
+    "build:core": "cd packages/semantic-minifier-core && npm run build",
+    "install:core": "cd packages/semantic-minifier-core && npm install",
+    "test": "node scripts/test-optimization.js",
+    "demo": "node scripts/demo-optimization.js"
+  },
+  "keywords": ["semantic", "minification", "babel", "ast", "optimization", "react", "react-native", "bundle-optimization", "build-tools"],
+  "author": "Semantic Build Optimizer",
+  "license": "MIT",
+  "dependencies": { "@babel/parser": "^7.24.7", "@babel/traverse": "^7.24.7", "@babel/generator": "^7.24.7", "@babel/types": "^7.24.7" },
+  "devDependencies": { "@babel/cli": "^7.24.7", "@babel/preset-env": "^7.24.7" },
+  "peerDependencies": { "node": ">=16.0.0" },
+  "engines": { "node": ">=16.0.0" },
+  "repository": { "type": "git", "url": "https://github.com/your-org/semantic-build-optimizer.git" },
+  "bugs": { "url": "https://github.com/your-org/semantic-build-optimizer/issues" },
+  "homepage": "https://github.com/your-org/semantic-build-optimizer#readme"
+}
